@@ -1,3 +1,12 @@
+<?php
+require_once('./php/fetchAll.php');
+session_start();
+
+$conn = new mysqli('localhost','your_username','your_password','bookStore') or die(mysqli_error($conn));
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +17,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
 
     <script src="./js/main.js"></script>
 </body>
