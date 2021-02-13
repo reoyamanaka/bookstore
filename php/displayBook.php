@@ -1,6 +1,4 @@
 <?php
-// require_once('../config.php');
-echo $config;
 $conn = new mysqli("localhost", "your_username", "your_password", "bookstore") or die(mysqli_error($conn));
 
 function displayBook($id){
