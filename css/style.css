@@ -118,7 +118,7 @@ body {
 /*search and sort end */
 
 
-/* featured start */
+/* featured html section start */
 .featured {
   width: 75%;
   margin: auto;
@@ -138,5 +138,48 @@ body {
 .item {
   text-align: center;
 }
+/* featured html section end */
 
-/* featured end */
+/*feature function style start */
+.unorderedItemList {
+  text-align: center;
+  list-style: none;
+  width: 40%;
+  /* background-color: #D1EDF2; */
+  padding: 0;
+  margin: auto;
+}
+
+.unorderedItemList li {
+  margin: 1rem auto;
+}
+.unorderedItemList img {
+  width: 100%;
+}
+
+.unorderedItemList .itemSubHeader {
+  font-weight: bold;
+}
+/*feature function style end */
+
+
+/*media query for feature and feature function start */
+@media(max-width: 896px){
+  .featured h2 {
+    text-align: center;
+  }
+  .featured .featuredItems{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+  }
+  .unorderedItemList {
+    text-align: center;
+    list-style: none;
+    width: 70%;
+    padding: 0;
+    margin: auto;
+  }
+}
+/*media query for feature and feature function end*/

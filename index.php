@@ -1,6 +1,7 @@
 <?php
 require_once('./config.php');
 require_once('./php/displayBook.php');
+require_once('./php/displayFeaturedBook.php');
 
 $conn = new mysqli($config['DB_HOST'], $config["DB_USERNAME"], $config["DB_PASSWORD"], $config["DB_DATABASE"]) or die(mysqli_error($conn));
 
@@ -71,7 +72,8 @@ $conn = new mysqli($config['DB_HOST'], $config["DB_USERNAME"], $config["DB_PASSW
     <div class="featured" id="featured">
       <h2>Featured Books</h2>
       <div class="featuredItems">
-
+        <?php displayFeaturedBook(2); ?>
+        <?php displayFeaturedBook(6); ?>
       </div>
     </div>
     <!-- featured end -->
