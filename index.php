@@ -46,7 +46,11 @@ $conn = new mysqli($config['DB_HOST'], $config["DB_USERNAME"], $config["DB_PASSW
     <!-- search and sort start -->
         <form action="search.php" class="searchAndSort" method="post">
             <h1>Search Any Product by:
-                <select>
+                <select style="
+                    font-size: 1.5rem;
+                    text-align: center;
+                    width: 8rem;
+                ">
                     <option>Title</option>
                     <option>Author</option>
                     <option>Genre</option>
@@ -61,9 +65,17 @@ $conn = new mysqli($config['DB_HOST'], $config["DB_USERNAME"], $config["DB_PASSW
                 <button><a href="add.php" class="addButton">Post a New Item</a></button>
             </form>
 
-
-
     <!-- search and sort end -->
+
+    <!-- featured start -->
+    <div class="featured" id="featured">
+      <h2>Featured Books</h2>
+      <div class="featuredItems">
+
+      </div>
+    </div>
+    <!-- featured end -->
+
 
     <script src="./js/main.js"></script>
 </body>

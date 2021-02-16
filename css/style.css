@@ -104,6 +104,7 @@ body {
   font-size: 1.5rem;
   width: 8rem;
   text-align: center;
+  
 }
 
 .searchField {
@@ -115,3 +116,27 @@ body {
   text-align: center;
 }
 /*search and sort end */
+
+
+/* featured start */
+.featured {
+  width: 75%;
+  margin: auto;
+}
+.featured h2 {
+  font-size: 3rem;
+  color: #0000A0;
+}
+.featured .featuredItems{
+  display: flex;
+  justify-content: center;
+  background-color: #8CBED6;
+  width: 90%;
+  margin: auto;
+}
+
+.item {
+  text-align: center;
+}
+
+/* featured end */
