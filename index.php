@@ -2,8 +2,11 @@
 require_once('./config.php');
 require_once('./php/displayBook.php');
 require_once('./php/displayFeaturedBook.php');
+require_once('./php/getTotalCount.php');
 
 $conn = new mysqli($config['DB_HOST'], $config["DB_USERNAME"], $config["DB_PASSWORD"], $config["DB_DATABASE"]) or die(mysqli_error($conn));
+
+$sumCount = getTotalCount();
 
 ?>
 
@@ -45,39 +48,64 @@ $conn = new mysqli($config['DB_HOST'], $config["DB_USERNAME"], $config["DB_PASSW
     <!-- showcase section end -->
 
     <!-- search and sort start -->
-        <form action="search.php" class="searchAndSort" method="post">
-            <h1>Search Any Product by:
-                <select style="
+    <form action="search.php" class="searchAndSort" method="post">
+        <h1>Search Any Product by:
+            <select style="
                     font-size: 1.5rem;
                     text-align: center;
                     width: 8rem;
                 ">
-                    <option>Title</option>
-                    <option>Author</option>
-                    <option>Genre</option>
-                </select>
-            </h1>
-            <div class="searchSortField">
-                <div class="searchField">
-                    <input type="text" placeholder="Search..." name="searchBox">
-                    <button type="submit" name="search">Search</button>
-                    </div>
-                </div>
-                <button><a href="add.php" class="addButton">Post a New Item</a></button>
-            </form>
+                <option>Title</option>
+                <option>Author</option>
+                <option>Genre</option>
+            </select>
+        </h1>
+        <div class="searchSortField">
+            <div class="searchField">
+                <input type="text" placeholder="Search..." name="searchBox">
+                <button type="submit" name="search">Search</button>
+            </div>
+        </div>
+        <button><a href="add.php" class="addButton">Post a New Item</a></button>
+    </form>
 
     <!-- search and sort end -->
 
     <!-- featured start -->
     <div class="featured" id="featured">
-      <h2>Featured Books</h2>
-      <div class="featuredItems">
-        <?php displayFeaturedBook(2); ?>
-        <?php displayFeaturedBook(6); ?>
-      </div>
+        <h2>Featured Books</h2>
+        <div class="featuredItems">
+            <?php displayFeaturedBook(2); ?>
+            <?php displayFeaturedBook(6); ?>
+        </div>
     </div>
     <!-- featured end -->
 
+
+    <!-- all books start -->
+    <div class="allBooks" id="allBooks">
+        <h2>All Books</h2>
+        <div class="allItems">
+            <table>
+                <tr>
+                    <th>Cover</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Genre</th>
+                    <th>Rating</th>
+                    <th>Add to Cart</th>
+                </tr>
+                <?php
+
+                for ($i = 1; $i < $sumCount + 1; $i++) {
+                    displayBook($i);
+                } ?>
+
+            </table>
+        </div>
+    </div>
+    <!-- all books end -->
 
     <script src="./js/main.js"></script>
 </body>

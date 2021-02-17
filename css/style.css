@@ -182,4 +182,33 @@ body {
     margin: auto;
   }
 }
-/*media query for feature and feature function end*/
+/*media query for feature and feature function end */
+
+
+/* all books start */
+.allBooks {
+  /* background-color: orange; */
+  width: 85%;
+  margin: auto;
+}
+.allBooks h2 {
+  font-size: 3rem;
+  color: #0000A0;
+}
+.allBooks h3{
+  text-align: center;
+}
+.allItems img{
+  width: 10vw;
+}
+.allItems table {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.allItems th, td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  margin: auto;
+}
+/* all books end */
+

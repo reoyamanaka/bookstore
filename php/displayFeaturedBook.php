@@ -1,7 +1,7 @@
 <?php 
 function displayFeaturedBook($id){
-    $con = new mysqli('localhost', 'your_username', 'your_password', 'bookstore') or die(mysqli_error($con));
-    $stmt = $con->prepare("SELECT * FROM inventory WHERE id=?");
+    $conn = new mysqli('localhost', 'your_username', 'your_password', 'bookstore') or die(mysqli_error($conn));
+    $stmt = $conn->prepare("SELECT * FROM inventory WHERE id=?");
     $stmt->bind_param('s', $id);
     $stmt->execute();
     $result = $stmt->get_result();
