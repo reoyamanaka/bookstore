@@ -106,7 +106,7 @@ $sumCount = getTotalCount();
     </div>
     <!-- all books end -->
 
-    <div class="year" id="new"><?php echo date("Y");?>.</div>
+    <div class="year" id="new">©<?php echo date("Y");?> Reo Yamanaka. All rights reserved.</div>  
 
     <script src="./js/main.js"></script>
 </body>
