@@ -26,7 +26,7 @@ function displayBook($id){
       <td>$$price</td>
       <td>$genre</td>
       <td>$rating / 5</td>
-
+      <td><button onclick='addToCart($id)'>Add to Cart</button></td>
     </tr>
     ";
 }
