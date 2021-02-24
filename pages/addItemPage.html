@@ -22,6 +22,40 @@
     </div>
     <!-- nav end -->
 
+    <!-- insert new item start -->
+         <div class="addNewForm">
+       <form action="addNew.php" method="post" enctype="multipart/form-data">
+          <h1>Add a New Item</h1>
+          <hr>
+          <b>Upload Product Image</b><br>
+          <input type="file" name="file"><br><br>
+
+          <b>Insert Title</b><br>
+          <input type="text" id="newTitle" name="newTitle"><br><br>
+          <b>Insert Author</b><br>
+          <input type="text" id="newAuthor" name="newAuthor"><br><br>
+          <b>Enter Price</b><br>
+          <input type="text" id="newPrice" name="newPrice"><br><br>
+          <b>Choose Genre</b><br>
+          <select name="newGenre">
+            <option value="Fiction">Fiction</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="Textbook">Textbook</option>
+          </select><br><br>
+          <b>Current Rating</b><br>
+          <select name="newRating">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select><br><br>
+          <button type="submit" name="uploadNew">Upload</button>
+       </form>
+     </div>
+
+    <!-- insert new element end -->
+
     <script src="../main.js"></script>
 </body>
 </html>
