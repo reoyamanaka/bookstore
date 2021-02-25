@@ -64,7 +64,7 @@ $sumCount = getTotalCount();
                 <button type="submit" name="search">Search</button>
             </div>
         </div>
-        <button><a href="add.php" class="addButton">Post a New Item</a></button>
+        <button><a href="./pages/addItemPage.html" class="addButton">Post a New Item</a></button>
     </form>
 
     <!-- search and sort end -->

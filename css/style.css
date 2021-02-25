@@ -218,3 +218,33 @@ body {
 }
 /* style year end */
 
+
+/* add new item start */
+.addNewForm{
+  text-align: center;
+
+}
+.addNewForm h1{
+  font-size: 3rem;
+  color: #0000A0;
+}
+.addNewForm form {
+width: 40%;
+margin: 3rem auto;
+display: block;
+background-color: #8CBED6;
+padding: 1rem;
+}
+.addNewForm b{
+  color: #0000A0;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.addNewForm input {
+  margin: 1rem;
+}
+.addNewForm button {
+  font-size: 2.5rem;
+}
+
+/*ad new item end*/
