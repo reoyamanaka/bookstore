@@ -44,7 +44,7 @@
           $conn->query("ALTER TABLE inventory MODIFY id int");
           $conn->query("ALTER TABLE inventory MODIFY COLUMN id int NOT NULL Primary Key auto_increment First");
 
-          header("Location: index.php#new");
+          header("Location: ../index.php#new");
         } else {
           echo "Your file is too large.";
         }
